@@ -70,12 +70,16 @@ variables:
     required: true
     title: MDS Admin Username
     description: MySQL Database Service's admin username
+    minLength: 1
+    maxLength: 14
+    pattern: "^[a-zA-Z][a-zA-Z0-9]+$"  
 
   admin_password:
-    type: string
+    type: password
     required: true
     title: MDS Admin User's Password
     description: Password for MySQL Database Service's admin user
+    pattern: "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\\-=\\[\\]{};':\\\"\\\\|,.<>\\/?]).{8,32}$"
 
   open_router:
     type: boolean
