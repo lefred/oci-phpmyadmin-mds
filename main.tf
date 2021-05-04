@@ -213,6 +213,7 @@ module "mds-instance" {
     compartment_ocid = var.compartment_ocid
     subnet_id = oci_core_subnet.private.id
     display_name = "MySQLInstance"
+    mysql_shape = var.mysql_shape
 }
 
 module "phpmyadmin" {
