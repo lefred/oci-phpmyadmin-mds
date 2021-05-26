@@ -231,6 +231,8 @@ module "phpmyadmin" {
   admin_username        = var.admin_username
   phpMyAdmin_version    = var.phpMyAdmin_version
   mysql_version         = var.mysql_version
+  flex_shape_ocpus      = var.node_flex_shape_ocpus
+  flex_shape_memory     = var.node_flex_shape_memory
 }
 
 module "mysql-router" {

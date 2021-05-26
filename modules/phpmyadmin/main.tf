@@ -34,6 +34,14 @@ resource "oci_core_instance" "PHPMyAdmin" {
   display_name        = "${var.label_prefix}${var.display_name}"
   shape               = var.shape
 
+  dynamic "shape_config" {
+    for_each = local.is_flexible_node_shape ? [1] : []
+    content {
+      memory_in_gbs = var.flex_shape_memory
+      ocpus = var.flex_shape_ocpus
+    }
+  }
+
   create_vnic_details {
     subnet_id        = var.subnet_id
     display_name     = "${var.label_prefix}${var.display_name}"
