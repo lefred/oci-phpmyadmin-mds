@@ -1,7 +1,7 @@
 title: "MySQL Database Service with PHPMyAdmin"
 stackDescription: "Creation of a MDS instance with PHPMyAdmin on a compute instance"
-schemaVersion: 1.3.0
-version: "20210526"
+schemaVersion: 1.4.0
+version: "20210905"
 locale: "en"
 
 

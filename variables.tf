@@ -101,5 +101,5 @@ variable "open_router" {
 
 variable "mysql_version" {
   description = "Version of MySQL Tools (MySQL Shell and MySQL Router)"
-  default     = "8.0.25"
+  default     = "8.0.26"
 }

@@ -9,4 +9,5 @@ output "mds_instance_ip" {
 output "instance_ssh_keys" {
   value       = tls_private_key.public_private_key_pair.private_key_pem
   description = "Please copy and save the private key to ssh in compute instance"
+  sensible    = true
 }
